@@ -1,0 +1,118 @@
+{% extends 'works/categorydetailnavbar.html' %}
+{% load static %}
+{% block title %}
+<!-- Title content here -->
+{% endblock title %}
+
+{% block content %}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(32, 32, 183);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    margin: 0;
+
+}
+
+main {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Three listings per row with a gap of 20px */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 400px; /* Adjusted height to 400px for 1080 x 1350 resolution */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-location {
+    font-style: italic;
+    color: #888;
+}
+
+.card-description {
+    margin-bottom: 15px;
+}
+
+.card-details p {
+    margin: 5px 0;
+}
+
+</style>
+<!-- <header>
+    <div class="header-content">
+        <h1>Property Listings</h1> -->
+        <!-- Additional header content can be added here -->
+    <!-- </div>
+</header> -->
+
+<main>
+    <div class="background">
+        <div class="container">
+            <div class="listings">
+                {% for listing in data %}
+                <a href="{% url 'productview' listing.id %}">
+                <div class="card" id="listing-{{ listing.id }}">
+                    <img class="card-img" src="{{ listing.photo_main.url }}" alt="Listing Photo"></a>
+            
+                    <div class="card-body">
+                        <h2 class="card-title">{{ listing.title }}</h2>
+                        <p class="card-location">{{ listing.address }}, {{ listing.city }}, {{ listing.state }} {{ listing.zipcode }}</p>
+                        <!-- <p class="card-description">{{ listing.description }}</p> -->
+                       
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

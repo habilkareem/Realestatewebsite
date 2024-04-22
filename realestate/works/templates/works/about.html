@@ -1,0 +1,357 @@
+{% extends 'works/categorydetailnavbar.html' %}
+{% load static %}
+{% block title %}
+<!-- Title content here -->
+{% endblock title %}
+
+{% block content %}
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-info {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.about-info h1 {
+    font-size: 36px;
+}
+
+.about-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-gallery img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-gallery img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.footer{
+margin-top: 80px;
+
+}
+
+body, h1, h2, h3, p, ul {
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Source Sans Pro', sans-serif;
+background-color: #f4f4f4;
+}
+
+/* Footer styles */
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700); */
+
+* {
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer-distributed{
+background: #666;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px 'Source Sans Pro', sans-serif;
+padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+color:  #ffffff;
+font: normal 36px 'Source Sans Pro', sans-serif, cursive;
+margin: 0;
+}
+
+.footer-distributed h3 span{
+color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+color:  #ffffff;
+margin: 20px 0 12px;
+padding: 0;
+}
+
+.footer-distributed .footer-links a{
+display:inline-block;
+line-height: 1.8;
+font-weight:400;
+text-decoration: none;
+color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+color:  #222;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+width: 35%;
+}
+
+.footer-distributed .footer-center i{
+background-color:  #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+font-size: 17px;
+line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+display: inline-block;
+color: #ffffff;
+font-weight:400;
+vertical-align: middle;
+margin:0;
+}
+
+.footer-distributed .footer-center p span{
+display:block;
+font-weight: normal;
+font-size:14px;
+line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+color:  lightseagreen;
+text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+content: "|";
+font-weight:300;
+font-size: 20px;
+left: 0;
+color: #fff;
+display: inline-block;
+padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+line-height: 20px;
+color:  #92999f;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+display: block;
+color:  #ffffff;
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 2px;
+
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+
+margin-right: 3px;
+margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+.footer-distributed{
+font: bold 14px 'Source Sans Pro', sans-serif;;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: block;
+width: 100%;
+margin-bottom: 40px;
+text-align: center;
+}
+
+.footer-distributed .footer-center i{
+margin-left: 0;
+}
+
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Your Real Estate Partner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-info">
+                <h1>About Us</h1>
+                <p>Welcome to Your Real Estate Partner! We are a team of dedicated professionals passionate about helping you find your dream home or investment property.</p>
+                <p>With years of experience in the real estate industry, we have built a reputation for delivering exceptional service and results. Whether you're buying, selling, or renting, we are committed to guiding you through every step of the process with integrity and expertise.</p>
+                <p>At Your Real Estate Partner, we understand that each client has unique needs and goals. That's why we take the time to listen and tailor our services to meet your specific requirements. Our goal is to exceed your expectations and make your real estate journey as smooth and enjoyable as possible.</p>
+                <p>Contact us today to learn more about how we can help you achieve your real estate goals!</p>
+            </div>
+            <div class="about-gallery">
+                <div class="image-container">
+                    <img src="https://cdn.pixabay.com/photo/2024/01/31/14/02/landscape-nature-8544186_1280.jpg" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://www.realestate.com.au/news-image/w_1280,h_720/v1659868366/news-lifestyle-content-assets/wp-content/production/capi_fe9d4c09db29e7d81b0b40086c49fd3f_bf5b61cdb7c816dbb0878e3bc0f8445a.jpeg?_i=AA" alt="Image 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://gkconsortium.com/wp-content/uploads/2022/04/1_Photo-2-1-scaled.jpg" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: black;" class="footer-distributed">
+
+        <div class="footer-left">
+    
+          <h3>HK<span>Realtors</span></h3>
+    
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+          
+            <a href="#">About</a>
+          </p>
+    
+          <p class="footer-company-name">Habil P Kareem © 2024</p>
+        </div>
+    
+        <div class="footer-center">
+    
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Luminar technolab</span> kakkanad, Ernakulam</p>
+          </div>
+    
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>080866 51651</p>
+          </div>
+    
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">www.luminartechnolab.com/</a></p>
+          </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+          <p class="footer-company-about">
+            <span>About the company</span>
+            HK Realtors is a premier real estate agency dedicated to delivering unparalleled results for our clients in Hong Kong and beyond. With a team of seasoned professionals boasting extensive experience and a deep understanding of the local market, we are committed to providing personalized solutions tailored to meet your unique needs and goals.
+          </p>
+    
+          <!-- <div class="footer-icons">
+    
+            <a href="https://www.facebook.com/luminartechnolab"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/luminartechno/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/luminartechnolab/mycompany/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/luminartechnolab/"><i class="fa fa-instagram"></i></a>
+    
+          </div> -->
+    
+        </div>
+    
+      </footer>
+{% endblock content %}
+

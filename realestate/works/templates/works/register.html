@@ -1,0 +1,153 @@
+{% extends 'works/regnavbar.html' %}
+{% load static %}
+{% block title %}
+
+{%endblock title%}
+
+
+{% block content %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login {
+    text-align: center;
+}
+
+.login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1 style="color: white;">Registration Form</h1>
+        <form method="post">
+            {%csrf_token%}
+            <fieldset>
+                <legend style="color: white;">User Information</legend>
+                <div class="form-group">
+                    <label style="color: white;" for="username">{{ form.username.label }}</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="name">{{ form.name.label }}</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo">{{ form.photo.label }}</label>
+                    {{ form.photo }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="description">{{ form.description.label }}</label>
+                    {{ form.description }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="phone">{{ form.phone.label }}</label>
+                    {{ form.phone }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="email">{{ form.email.label }}</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="password">{{ form.password.label }}</label>
+                    {{ form.password }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="is_mvp">{{ form.is_mvp.label }}</label>
+                    {{ form.is_mvp }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="hire_date">{{ form.hire_date.label }}</label>
+                    {{ form.hire_date }}
+                </div>
+            </fieldset>
+            <button style="margin-left: 43%;" type="submit">Register</button>
+        </form>
+        <div class="login">
+            <p style="color: white;">Already have an account? <a href="{%url 'login'%}">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+

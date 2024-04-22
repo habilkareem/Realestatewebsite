@@ -1,0 +1,193 @@
+{% extends 'works/listnavbar.html' %}
+{% load static %}
+{% block title %}
+
+{%endblock title%}
+
+
+{% block content %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login {
+    text-align: center;
+}
+
+.login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1 style="color: white;">Listing Form</h1>
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <fieldset>
+                <legend style="color: white;">Listing Information</legend>
+                <div class="form-group">
+                    <label style="color: white;" for="title">{{ form.title.label }}</label>
+                    {{ form.title }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="realtor">{{ form.realtor.label }}</label>
+                    {{ form.realtor }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="category">{{ form.category.label }}</label>
+                    {{ form.category }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="address">{{ form.address.label }}</label>
+                    {{ form.address }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="city">{{ form.city.label }}</label>
+                    {{ form.city }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="email">{{ form.state.label }}</label>
+                    {{ form.state }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="zipcode">{{ form.zipcode.label }}</label>
+                    {{ form.zipcode }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="description">{{ form.description.label }}</label>
+                    {{ form.description }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="price">{{ form.price.label }}</label>
+                    {{ form.price }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="bedrooms">{{ form.bedrooms.label }}</label>
+                    {{ form.bedrooms }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="bathrooms">{{ form.bathrooms.label }}</label>
+                    {{ form.bathrooms }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="garage">{{ form.garage.label }}</label>
+                    {{ form.garage }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="sqft">{{ form.sqft.label }}</label>
+                    {{ form.sqft }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="lot_size">{{ form.lot_size.label }}</label>
+                    {{ form.lot_size }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_main">{{ form.photo_main.label }}</label>
+                    {{ form.photo_main }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_1">{{ form.photo_1.label }}</label>
+                    {{ form.photo_1 }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_2">{{ form.photo_2.label }}</label>
+                    {{ form.photo_2 }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_3">{{ form.photo_3.label }}</label>
+                    {{ form.photo_3 }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_4">{{ form.photo_4.label }}</label>
+                    {{ form.photo_4 }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="photo_5">{{ form.photo_5.label }}</label>
+                    {{ form.photo_5 }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="is_published">{{ form.is_published.label }}</label>
+                    {{ form.is_published }}
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="list_date">{{ form.list_date.label }}</label>
+                    {{ form.list_date }}
+                </div>
+            </fieldset>
+            <button style="margin-left: 43%;" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock content %}
+

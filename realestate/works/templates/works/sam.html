@@ -1,0 +1,559 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Details - Your Brand</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+} */
+
+.product-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    margin-left: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e07600;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-image{
+    width:300px;
+    height: 300px;
+}
+
+
+
+
+
+.footer{
+      margin-top: 80px;
+
+    }
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Footer styles */
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700); */
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px 'Source Sans Pro', sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Source Sans Pro', sans-serif, cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px 'Source Sans Pro', sans-serif;;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color:  rgb(46, 40, 40);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: grey;
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+body{
+
+ background-color: white;
+ font-family: "Poppins", sans-serif;
+ font-weight: 300;
+
+
+}
+
+
+
+ul{
+
+ list-style: none;
+ display: flex;
+ margin-bottom: 0;
+}
+
+ 
+
+
+
+ .social-twitter{
+
+   background-color: #55acee;
+ }
+
+
+ .social-facebook{
+
+   background-color: #3b5999;
+ }
+
+
+ .social-linkedin{
+
+   background-color: #0077B5;
+ }
+
+
+ .social-google{
+
+   background-color: #dd4b39;
+ }
+
+ .social-instagram{
+
+   background-color: #dd4b39;
+ }
+
+ .social-icon i{
+
+   transition: 0.4s all;
+ }
+
+ .social-icon:hover i{
+
+   transform: scale(1.1);
+
+ }
+
+ .d-flex{
+  margin-left: 60%;
+ }
+
+ .collapse{
+  margin-top: 7px;
+ }
+
+ .navbar{
+  background-color: black;
+ }
+
+ /* burlywood; */
+
+
+
+ .secondnav{
+  width:100%;
+  height:5px;
+  background-color: gray;
+ }
+
+ .navbar-brand{
+  margin-top: 7px;
+  margin-left: 30px;
+ }
+
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <h3 style="color: white; margin-left: 50px; margin-top: 2px;">HK<span style="color: lightseagreen;">Realtors</span></h3>
+      <!-- <h1 style="color: white;" class="navbar-brand" href="{%url 'home'%}">HK REALTORS</h1> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          
+          <li style="margin-left: 40px;" class="nav-item">
+            <a style="color: white;" class="nav-link active" aria-current="page" href="{%url 'home'%}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{% url 'about' %}">ABOUT</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="">OUR LISTINGS</a>
+          </li> -->
+          {% if request.session.logged_in %}
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{%url 'logout'%}">LOGOUT</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{%url 'listing'%}">LISTING</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{%url 'dashboard'%}">DASHBOARD</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{%url 'reg'%}">REALTOR ?</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" href="{%url 'login'%}">LOGIN</a>
+          </li>
+        </ul>
+          
+          {% endif %}
+          <!-- <li class="nav-item">
+          <form class="d-flex" role="search" style="margin-left: 20px;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </li> -->
+          
+        
+  
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="secondnav"></div>
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+    </div>
+    <div class="carousel-inner" style="margin-top: 1px;">
+      <div class="carousel-item active">
+        <!-- <video autoplay muted loop style="width: 100%;">
+          <source src="{% static 'images/new2.jpg' %}" type="video/mp4">
+           Add additional source elements for other video formats if needed -->
+          <!-- Your browser does not support the video tag.
+        </video> -->
+        <img src="{% static 'images/slider-1.webp' %}" class="d-block w-100" alt="...">
+      </div>
+      <!-- <div class="carousel-item active">
+        <img src="{% static 'images/new2.jpg' %}" class="d-block w-100" alt="..."> -->
+      <!-- </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/new2.jpg' %}" class="d-block w-100" alt="..."> -->
+      <!-- </div> -->
+    </div>
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+  </div>
+</div>
+
+
+
+{% block content %}
+{% endblock content %}
+
+<footer style="background-color: black;" class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>HK<span>Realtors</span></h3>
+
+      <p class="footer-links">
+        <a href="#" class="link-1">Home</a>
+      
+        <a href="#">About</a>
+      </p>
+
+      <p class="footer-company-name">Habil P Kareem © 2024</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Luminar technolab</span> kakkanad, Ernakulam</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>080866 51651</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">www.luminartechnolab.com/</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        HK Realtors is a premier real estate agency dedicated to delivering unparalleled results for our clients in Hong Kong and beyond. With a team of seasoned professionals boasting extensive experience and a deep understanding of the local market, we are committed to providing personalized solutions tailored to meet your unique needs and goals.
+      </p>
+
+      <!-- <div class="footer-icons">
+
+        <a href="https://www.facebook.com/luminartechnolab"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/luminartechno/"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/luminartechnolab/mycompany/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/luminartechnolab/"><i class="fa fa-instagram"></i></a>
+
+      </div> -->
+
+    </div>
+
+  </footer>
+
+</html>

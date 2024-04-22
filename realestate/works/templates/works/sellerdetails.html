@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: lightgrey;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #555;
+        }
+        .logout-link {
+            margin-left: 45%;
+            color: #dc3545;
+            text-decoration: none;
+        }
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ realtor.name }}!</h1>
+        {% if inquiries %}
+            {% for inquiry in inquiries %}
+                <div class="card">
+                    <h2>{{ inquiry.full_name }}</h2>
+                    <p><strong>Email:</strong> {{ inquiry.email }}</p>
+                    <p><strong>Phone Number:</strong> {{ inquiry.phone_number }}</p>
+                    <p><strong>Message:</strong> {{ inquiry.message }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No inquiries found.</p>
+        {% endif %}
+        <p><a href="{% url 'logout' %}" class="logout-link">Logout</a></p>
+    </div>
+</body>
+</html>
+
